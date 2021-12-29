@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  MdAddCircleOutline,
-  MdDelete,
-  MdRemoveCircleOutline,
-} from "react-icons/md";
+import { MdAddCircleOutline, MdDelete, MdRemoveCircleOutline } from "react-icons/md";
 import { useCart } from "../../hooks/useCart";
 import { formatPrice } from "../../util/format";
 import { Container, ProductTable, Total } from "./styles";
@@ -80,12 +76,7 @@ const Cart = (): JSX.Element => {
                     >
                       <MdRemoveCircleOutline size={20} />
                     </button>
-                    <input
-                      type="text"
-                      data-testid="product-amount"
-                      readOnly
-                      value={product.amount}
-                    />
+                    <input type="text" data-testid="product-amount" readOnly value={product.amount} />
                     <button
                       type="button"
                       data-testid="increment-product"
@@ -99,11 +90,7 @@ const Cart = (): JSX.Element => {
                   <strong>{formatPrice(product.price)}</strong>
                 </td>
                 <td>
-                  <button
-                    type="button"
-                    data-testid="remove-product"
-                    onClick={() => handleRemoveProduct(product.id)}
-                  >
+                  <button type="button" data-testid="remove-product" onClick={() => handleRemoveProduct(product.id)}>
                     <MdDelete size={20} />
                   </button>
                 </td>
